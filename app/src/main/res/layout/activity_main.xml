@@ -1,61 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
     <TextView
-        android:id="@+id/text1"
+        android:id="@+id/teamA_Label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="Team A"
+        android:text="@string/team_a"
         android:textColor="#FF6636"
-        android:textSize="20dp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toStartOf="@id/divider"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/text2"
+        android:id="@+id/teamB_Label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
         android:layout_marginTop="30dp"
-        android:text="Team B"
+        android:text="@string/team_b"
         android:textColor="#FF6636"
-        android:textSize="20dp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/divider"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/text3"
+        android:id="@+id/teamA_Score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="0"
+        android:text="@string/_0"
         android:textColor="#FF6636"
-        android:textSize="40dp"
+        android:textSize="40sp"
         app:layout_constraintEnd_toStartOf="@id/divider"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text1" />
+        app:layout_constraintTop_toBottomOf="@id/teamA_Label" />
 
     <TextView
-        android:id="@+id/text4"
+        android:id="@+id/teamB_Score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
         android:layout_marginTop="30dp"
-        android:text="0"
+        android:text="@string/_0"
         android:textColor="#FF6636"
-        android:textSize="40dp"
+        android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/divider"
-        app:layout_constraintTop_toBottomOf="@id/text2" />
+        app:layout_constraintTop_toBottomOf="@id/teamB_Label" />
 
     <View
         android:id="@+id/divider"
@@ -67,100 +70,100 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/pts3_A"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:backgroundTint="#FF6636"
         android:bottomLeftRadius="10dp"
         android:bottomRightRadius="10dp"
-        android:text="+3 POINTS"
+        android:text="@string/_3_points"
         android:textColor="#FFFFFF"
         android:topLeftRadius="10dp"
         android:topRightRadius="10dp"
         app:layout_constraintEnd_toStartOf="@id/divider"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text3" />
+        app:layout_constraintTop_toBottomOf="@id/teamA_Score" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/pts3_B"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:backgroundTint="#FF6636"
         android:bottomLeftRadius="10dp"
         android:bottomRightRadius="10dp"
-        android:text="+3 POINTS"
+        android:text="@string/_3_points"
         android:textColor="#FFFFFF"
         android:topLeftRadius="10dp"
         android:topRightRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/divider"
-        app:layout_constraintTop_toBottomOf="@id/text4" />
+        app:layout_constraintTop_toBottomOf="@id/teamB_Score" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/pts2_A"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:backgroundTint="#FF6636"
         android:bottomLeftRadius="10dp"
         android:bottomRightRadius="10dp"
-        android:text="+2 POINTS"
+        android:text="@string/_2_points"
         android:textColor="#FFFFFF"
         android:topLeftRadius="10dp"
         android:topRightRadius="10dp"
         app:layout_constraintEnd_toStartOf="@id/divider"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/button1" />
+        app:layout_constraintTop_toBottomOf="@id/pts3_A" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/pts2_B"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:backgroundTint="#FF6636"
         android:bottomLeftRadius="10dp"
         android:bottomRightRadius="10dp"
-        android:text="+2 POINTS"
+        android:text="@string/_2_points"
         android:textColor="#FFFFFF"
         android:topLeftRadius="10dp"
         android:topRightRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/divider"
-        app:layout_constraintTop_toBottomOf="@id/button2" />
+        app:layout_constraintTop_toBottomOf="@id/pts3_B" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/FreeThrowA"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:backgroundTint="#FF6636"
         android:bottomLeftRadius="10dp"
         android:bottomRightRadius="10dp"
-        android:text="FREE THROW"
+        android:text="@string/free_throw"
         android:textColor="#FFFFFF"
         android:topLeftRadius="10dp"
         android:topRightRadius="10dp"
         app:layout_constraintEnd_toStartOf="@id/divider"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/button3" />
+        app:layout_constraintTop_toBottomOf="@id/pts2_A" />
 
     <Button
-    android:id="@+id/button6"
-    android:layout_width="150dp"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="40dp"
-    android:backgroundTint="#FF6636"
-    android:bottomLeftRadius="10dp"
-    android:bottomRightRadius="10dp"
-    android:text="FREE THROW"
-    android:textColor="#FFFFFF"
-    android:topLeftRadius="10dp"
-    android:topRightRadius="10dp"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toEndOf="@id/divider"
-    app:layout_constraintTop_toBottomOf="@id/button4" />
+        android:id="@+id/FreeThrowB"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#FF6636"
+        android:bottomLeftRadius="10dp"
+        android:bottomRightRadius="10dp"
+        android:text="@string/free_throw"
+        android:textColor="#FFFFFF"
+        android:topLeftRadius="10dp"
+        android:topRightRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/divider"
+        app:layout_constraintTop_toBottomOf="@id/pts2_B" />
 
     <Button
         android:id="@+id/button7"
@@ -169,12 +172,13 @@
         android:backgroundTint="#FF6636"
         android:bottomLeftRadius="10dp"
         android:bottomRightRadius="10dp"
-        android:text="RESET"
+        android:text="@string/reset"
         android:textColor="#FFFFFF"
         android:topLeftRadius="10dp"
         android:topRightRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/divider" />
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

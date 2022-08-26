@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/HP/AndroidStudioProjects/CourtCounter/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2365" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/CourtCounter/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/CourtCounter/app/src/main/res/layout/activity_winner_screen.xml" value="0.264" />
       </map>
     </option>
   </component>
